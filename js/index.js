@@ -305,7 +305,6 @@
         'open-meta-panel': open_meta_panel,
         'lang-zh': () => change_lang('zh'),
         'lang-en': () => change_lang('en'),
-        'share': start_share,
         'back': go_back,
     };
 
@@ -390,23 +389,6 @@
             return max_width
         }
         return dynamic_width;
-    }
-
-    function start_share(e) {
-        const trigger_button = e.currentTarget;
-        const progress = $g('share_progress');
-        const shared_link = $g('shared_link');
-        trigger_button.disabled = true;
-        progress.style.display = '';
-        progress.innerHTML = 'Creating...';
-        shared_link.style.display = '';
-        shared_link.innerHTML = '...';
-        upload_to_cloud(e).then((v) => {
-            progress.innerHTML = 'Created successfully:';
-            const link = `${JSMIND_ONLINE}/#m/${v.data.key}`;
-            shared_link.innerHTML = `<a href="${link}" target="_blank">${link}</a>`;
-            trigger_button.disabled = false;
-        });
     }
 
     function upload_to_cloud(e) {
