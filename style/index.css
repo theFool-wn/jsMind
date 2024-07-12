@@ -187,26 +187,6 @@ aside section.section-edit-metadata .section-body>input {
     margin-top: 2px;
 }
 
-aside .notes {
-    font-size: 14px;
-}
-
-aside code {
-    background-color: #fff;
-    border: solid 1px #eee;
-    font-size: 14px;
-}
-
-aside code.multi-line {
-    display: block;
-    padding: 4px 8px;
-    word-break: break-word;
-}
-
-aside code a {
-    color: #444;
-}
-
 aside input {
     height: 30px;
 }
