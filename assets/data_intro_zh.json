@@ -1,0 +1,117 @@
+{
+    "meta": {
+        "name": "Concise Mindmap",
+        "author": "me@wangnan.net",
+        "version": "1.0"
+    },
+    "format": "node_tree",
+    "data": {
+        "id": "root",
+        "topic": "jsMind 使用",
+        "children": [
+            {
+                "id": "b587",
+                "topic": "动手试一试吧!",
+                "direction": "left",
+                "background-color": "#f39c12",
+                "leading-line-color": "#e67e22"
+            },
+            {
+                "id": "5b35",
+                "topic": "鼠标操作",
+                "direction": "right",
+                "children": [
+                    {
+                        "id": "d27d",
+                        "topic": "单击: 选择节点"
+                    },
+                    {
+                        "id": "4c7d",
+                        "topic": "双击: 进入编辑模式，回车保存"
+                    },
+                    {
+                        "id": "9bc0",
+                        "topic": "拖动: 摆放节点"
+                    },
+                    {
+                        "id": "5ad8",
+                        "topic": "点小圆圈: 展开/收缩子节点"
+                    }
+                ]
+            },
+            {
+                "id": "0b5c",
+                "topic": "键盘操作",
+                "direction": "right",
+                "children": [
+                    {
+                        "id": "1007",
+                        "topic": "Enter: 添加同级节点"
+                    },
+                    {
+                        "id": "f389",
+                        "topic": "Ctrl+Enter / Insert / Tab: 添加下级节点"
+                    },
+                    {
+                        "id": "9b69",
+                        "topic": "F2: 进入编辑模式，回车保存"
+                    },
+                    {
+                        "id": "15e3",
+                        "topic": "Delete: 删除节点"
+                    },
+                    {
+                        "id": "1565",
+                        "topic": "Space: 展开/收缩子节点"
+                    },
+                    {
+                        "id": "27ca",
+                        "topic": "←↕→: 选择节点"
+                    }
+                ]
+            },
+            {
+                "id": "d974",
+                "topic": "jsMind 有什么优势",
+                "direction": "left",
+                "children": [
+                    {
+                        "id": "693b",
+                        "topic": "快"
+                    },
+                    {
+                        "id": "1405",
+                        "topic": "简洁"
+                    },
+                    {
+                        "id": "471a",
+                        "topic": "开源 免费"
+                    },
+                    {
+                        "id": "5e48",
+                        "topic": "支持 HTML 语法"
+                    }
+                ]
+            },
+            {
+                "id": "f587",
+                "topic": "进阶操作",
+                "direction": "left",
+                "children": [
+                    {
+                        "id": "473a",
+                        "topic": "修改主题"
+                    },
+                    {
+                        "id": "093f",
+                        "topic": "自定义样式"
+                    },
+                    {
+                        "id": "1408",
+                        "topic": "嵌入个人网页"
+                    }
+                ]
+            }
+        ]
+    }
+}

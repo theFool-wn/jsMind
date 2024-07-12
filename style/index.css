@@ -1,0 +1,473 @@
+html,
+body,
+header {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", Verdana, Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+br.clear {
+    font-size: 1px;
+    clear: both;
+}
+
+header {
+    height: 40px;
+    background-color: #eee;
+    border-bottom: solid 1px #aaa;
+    z-index: 100;
+}
+
+header>h1 {
+    float: left;
+    margin: 0 15px;
+    color: #444;
+    text-shadow: 1px 1px 1px #fff;
+    font: bold 25px/40px jsmind, "Microsoft YaHei", Verdana, Arial, Helvetica, sans-serif;
+}
+
+header>h1>a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header>nav {
+    float: right;
+    height: 100%;
+    margin-right: 20px;
+    /* margin-left: 256px; */
+}
+
+header>nav>ul {
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header>nav>ul>li {
+    float: left;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header>nav>ul a {
+    display: block;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #fff;
+    white-space: nowrap;
+    font: normal 14px/36px Verdana, Arial, Helvetica, sans-serif;
+    height: 36px;
+    border-radius: 18px;
+    padding: 0 12px;
+        margin-top: 2px;
+        color: #333;
+    cursor: pointer;
+}
+
+header>nav>ul a>span {
+    margin-right: 4px;
+}
+
+header>nav>ul a:hover {
+    background-color: #e1e1e1;
+    color: #0a0;
+}
+
+header>.title-bar {
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+header>.title-bar>h2 {
+    cursor: pointer;
+    font: normal 16px/1 "Microsoft YaHei", Verdana, Arial, Helvetica, sans-serif;
+    margin: 0 8px 8px 8px;
+    padding: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.setting-panel-hidden aside {
+    display: none;
+}
+
+.setting-panel-visible aside {
+    display: block;
+}
+
+.hidden-panel {
+    position: absolute;
+    top: -10000px;
+}
+
+.workbench {
+    float: left;
+    position: relative;
+    height: 100%;
+}
+
+.jsmind-container {
+    height: 100%;
+    width: 100%;
+}
+
+aside {
+    background-color: #f9f9f9;
+    border-left: solid 1px #eee;
+    position: absolute;
+    top: 41px;
+    right: 0;
+    height: calc(100vh - 62px);
+    z-index: 2;
+}
+
+aside .title-bar {
+    height: 36px;
+    text-align: center;
+}
+
+aside .title-bar>label {
+    height: 36px;
+    font: normal 16px/36px "Microsoft YaHei", Verdana, Arial, Helvetica, sans-serif;
+}
+
+aside .title-bar>span {
+    color: gray;
+    font-size: 14px;
+    line-height: 36px;
+    margin-right: 11px;
+    float: right;
+}
+
+aside section {
+    margin: 12px 18px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 20px;
+    border: solid 1px #eee;
+        border-radius: 10px;
+        background-color: #fff;
+}
+
+aside section .section-title {
+    margin-bottom: 10px;
+}
+
+aside section.section-edit-metadata .section-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+aside section.section-edit-metadata .section-body>label {
+    flex-basis: 60px;
+    flex-grow: 1;
+    line-height: 35px;
+    margin-right: 10px;
+    font-size: 16px;
+    margin-top: 2px;
+    color: #666;
+}
+
+aside section.section-edit-metadata .section-body>input {
+    flex-basis: 240px;
+    flex-grow: 1;
+    border: none;
+    border-bottom: solid 1px #999;
+    font-size: 16px;
+    padding: 0 5px;
+    font-family: "Microsoft YaHei", Verdana, Arial, Helvetica, sans-serif;
+    margin-top: 2px;
+}
+
+aside .notes {
+    font-size: 14px;
+}
+
+aside code {
+    background-color: #fff;
+    border: solid 1px #eee;
+    font-size: 14px;
+}
+
+aside code.multi-line {
+    display: block;
+    padding: 4px 8px;
+    word-break: break-word;
+}
+
+aside code a {
+    color: #444;
+}
+
+aside input {
+    height: 30px;
+}
+
+aside button {
+    font-size: 16px;
+    height: 36px;
+}
+
+.jsmind-tools {
+    position: absolute;
+    z-index: 110;
+    top: 60px;
+    left: 20px;
+    border: solid 1px #fff;
+    background-color: #fff;
+    border-radius: 5px;
+    opacity: 0.5;
+}
+
+.jsmind-tools:hover {
+    opacity: 1;
+}
+
+.jsmind-tools ul {
+    float: left;
+    margin: 0 3px;
+}
+
+.jsmind-tools li {
+    display: none;
+}
+
+.jsmind-tools li.title {
+    display: list-item;
+}
+
+.jsmind-tools li.title .menu-text {
+    display: none;
+}
+
+.jsmind-tools-active {
+    border-color: gray;
+    opacity: 1;
+}
+
+.jsmind-tools-active li {
+    display: list-item;
+}
+
+.jsmind-tools-active li.title {
+    opacity: 1;
+}
+
+.jsmind-tools-active li.title .menu-text {
+    display: inline-block;
+}
+
+.menu {
+    padding: 6px 8px;
+    list-style: none;
+}
+
+.menu li {
+    height: 28px;
+    opacity: 0.4;
+    cursor: default;
+    user-select: none;
+    font-family: "Microsoft YaHei", simhei, STHeiTi, sans-serif, Verdana;
+    vertical-align: middle;
+}
+
+.menu li:hover {
+    opacity: 1;
+}
+
+.menu .menu-icon {
+    display: inline-block;
+    font-size: 18px;
+    height: 28px;
+    line-height: 28px;
+    margin-right: 6px;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.menu .menu-text {
+    display: inline-block;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    vertical-align: baseline;
+}
+
+.menu .menu-divider {
+    border-bottom: solid 1px gray;
+    height: 0;
+    margin: 6px 0;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item .menu {
+    background-color: #fff;
+    border: solid 1px gray;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    left: 95%;
+    top: 0;
+    z-index: 112;
+}
+
+.menu-item:hover .menu {
+    display: block;
+}
+
+.menu-language-options {
+    width: 160px;
+}
+
+.dialog {
+    position: absolute;
+    z-index: 101;
+    top: 40px;
+    left: 400px;
+    border: solid 1px gray;
+    background-color: #fff;
+    border-radius: 5px;
+    opacity: 1;
+    width: 400px;
+    height: 200px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    border-top: solid 1px #bbb;
+}
+
+footer nav {
+    font: normal 12px/20px Verdana, Arial, Helvetica, sans-serif;
+    margin-left: 15px;
+}
+
+footer nav a {
+    color: #666;
+    text-decoration: none;
+}
+
+div.jsmind-error {
+    position: absolute;
+    display: none;
+    z-index: 100;
+    top: 200px;
+    width: 100%;
+}
+
+div.jsmind-error .error-content {
+    width: 480px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px 0;
+}
+
+.error-content .error-icon {
+    display: inline-block;
+    font-size: 36px;
+    width: 40px;
+    margin-left: 20px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.error-content .error-message {
+    display: inline-block;
+    font-size: 16px/1;
+    width: 390px;
+}
+
+.error-content .error-message p {
+    margin: 2px 0;
+}
+
+.error-content .error-actions {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.error-content .error-actions span {
+    border-radius: 6px;
+    margin: 0 4px;
+    cursor: pointer;
+    color: #000;
+    background-color: #ccc;
+    padding: 2px 8px;
+}
+
+.error-content .error-actions span:hover {
+    color: #fff;
+    background-color: #555;
+}
+
+@media screen and (max-device-width: 1024px) {
+    .jsmind-tools li {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    header {
+        height: 36px;
+    }
+
+        header>h1 {
+        margin: 0 4px;
+        font-size: 18px;
+        line-height: 36px;
+    }
+
+        header>nav {
+            margin-right: 10px;
+    }
+
+        header>nav>ul a {
+            height: 28px;
+            width: 14px;
+            padding: 0 4px;
+            line-height: 28px;
+            margin-top: 4px;
+            overflow: hidden;
+            border-radius: 4px;
+            background-color: transparent;
+        }
+
+        header>.title-bar>h2 {
+            font-size: 14px;
+            margin-bottom: 4px;
+    }
+
+    .jsmind-tools {
+        top: 44px;
+        left: 8px;
+    }
+
+    footer {
+        height: 20px;
+    }
+
+    footer nav {
+        line-height: 20px;
+    }
+
+        header h1:first-letter {
+            line-height: 16px;
+        }
+}
