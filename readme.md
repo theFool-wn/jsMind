@@ -9,4 +9,4 @@ and built a simple and lightweight mind map that is more suitable for me.
 # LICENSE
 This work is licensed under a [BSD license](/LICENSE).
 
-&copy; 2024 Wang Nan.
+&copy; 2024-2025 Wang Nan.
